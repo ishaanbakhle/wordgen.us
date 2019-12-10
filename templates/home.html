@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"> -->
+  </head>
+  <body>
+    {% extends "nav.html" %}
+    {% block content %}
+    <div class = "home">
+      <h2>Use WordGen to produce new phonetically-pronouncable words. Click below to generate:</h2>
+      <form method = post action =".">
+        <p><input type = "submit" value = "Generate"></p>
+      </form>
+    </div>
+    {% endblock %}
+  </body>
+</html>
