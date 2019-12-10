@@ -26,14 +26,9 @@ def fill_matrix(dataset):
                 val2 += 1
             ind1 = get_ord(dataset[i])
             ind2 = get_ord(dataset[val2])
-            matrix[ind1][ind2] += 1
+            matrix[ind2][ind1] += 1
 
     matrix = preprocessing.normalize(matrix, norm='l1')
-
-    for i in range(len(matrix)):
-        su = sum(matrix[i])
-        if su - 1:
-            matrix[i][len(list(rang))-1] += 1-su
 
     return matrix
 

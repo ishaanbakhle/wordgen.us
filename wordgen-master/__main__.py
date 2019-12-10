@@ -2,6 +2,7 @@ import generator
 import data_gen
 import consts
 import argparse
+import csv
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--num_strings', required=False)
@@ -16,11 +17,15 @@ if (not dataset is None and type(dataset == str)):
         dataset = open(args.dataset, 'r')
         dataset = dataset.read()
 
-if not args.dataset:
+else:
     dataset = open('wordgen/test.txt', 'r')
     dataset = dataset.read()
 
 matrix = data_gen.fill_matrix(dataset)
+
+with open("out.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerows(matrix)
 
 if (args.num_strings):
     generator.generate(matrix, int(args.num_strings))
