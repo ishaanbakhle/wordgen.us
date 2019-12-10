@@ -17,7 +17,7 @@ def fill_matrix(dataset):
 
     dataset = dataset.lower()
 
-    accepted = list("abcdefghijklmnopqrstuvqxyz") + ['\n']
+    accepted = list("abcdefghijklmnopqrstuvqwxyz") + ['\n']
     for i in range(len(dataset)-1):
         # if (dataset[i+1] in accepted and dataset[i] in accepted):
         if dataset[i] in accepted:
