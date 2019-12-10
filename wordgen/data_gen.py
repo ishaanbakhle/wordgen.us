@@ -1,4 +1,4 @@
-from consts import *
+from wordgen import consts
 import numpy as np
 from sklearn import preprocessing
 
@@ -10,9 +10,9 @@ def fill_matrix(dataset):
 
     matrix = []
 
-    for i in rang:
+    for i in consts.rang:
         matrix.append([])
-        for o in rang:
+        for o in consts.rang:
             matrix[i].append(0)
 
     dataset = dataset.lower()
@@ -24,8 +24,8 @@ def fill_matrix(dataset):
             val2 = i+1
             while (val2 < len(dataset) and not (dataset[val2] in accepted)):
                 val2 += 1
-            ind1 = get_ord(dataset[i])
-            ind2 = get_ord(dataset[val2])
+            ind1 = consts.get_ord(dataset[i])
+            ind2 = consts.get_ord(dataset[val2])
             matrix[ind2][ind1] += 1
 
     matrix = preprocessing.normalize(matrix, norm='l1')

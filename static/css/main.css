@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Heebo|Nanum+Gothic|Noto+Sans+KR|Nunito+Sans&display=swap');
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Lora', serif;
+    font-family: 'Noto Sans KR', sans-serif;
     color: #FEFFFE;
     background-color: #B2BCF8;
   }
@@ -43,6 +42,7 @@ body {
     -webkit-border-radius: 6px;
        -moz-border-radius: 6px;
         border-radius: 6px;
+    align-content: center;
   }
   h1 {
     font-size: 2.3em;
@@ -69,6 +69,11 @@ body {
     color: #FEFFFE;
   }
 
+  /* form {
+    display: flex;
+    align-content: center;
+  } */
+
   /* Aligns left */
   .menu {
     float: right;
@@ -94,3 +99,25 @@ body {
     width: 50%;
     padding: 10px;
   }
+
+  .myButton {
+    background-color:#44c767;
+    border-radius:28px;
+    border:1px solid #18ab29;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding:16px 31px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+  }
+  .myButton:hover {
+    background-color:#5cbf2a;
+  }
+  .myButton:active {
+    position:relative;
+    top:1px;
+  }
+  
